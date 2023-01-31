@@ -2,11 +2,10 @@ const SEARCH = document.getElementById('search-button');
 const HISTORY = document.getElementById('history');
 const FORECAST = document.getElementById('forecast');
 
-const APIKEY = "88f2e9603106d9234412cf3c047c4822"
-
+const APIKEY = config.APIKEY;
 
 function renderForecast(city) {
-    const queryURL = `https://api.openweathermap.org/data/2.5/forecast/?q=${city}&units=metric&cnt=40&appid=${APIKEY}`
+    const queryURL = `https://api.openweathermap.org/data/2.5/forecast/?q=${city}&units=metric&cnt=40&appid=${APIKEY}`;
     $.ajax({
         url: queryURL
     }).then(function(response){
