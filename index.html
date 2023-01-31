@@ -19,18 +19,24 @@
   <!-- max-width for ultra wide resolutions -->
   <div class="container-fluid" style="max-width: 1400px">
     <div class="row">
-      <aside class="col-lg-3 pb-3">
-        <h2 id="form-heading" class="mt-1 h3 form-label">
+      <aside class="col-md-3 pb-3">
+        <h3 id="form-heading" class="mt-1 h3 form-label">
           Search for a City:
-        </h2>
+        </h3>
         <form id="search-form" class="form">
-          <div class="form-inline form-group">
-            <div class="input-group">
-              <input class="form-input weather-search" type="text" id="search-input" placeholder="London"
+          <div class="form-group">
+            <div class="input-group rounded">
+              <input class="form-input weather-search p-1" type="text" id="search-input" placeholder="London"
                 aria-labelledby="form-heading" aria-controls="today forecast" />
               <div class="input-group-append">
-                <button type="submit" class="btn search-button" id="search-button" aria-label="submit search">
-                  Search
+              <button type="submit" class="btn mt-2 p-1 search-button btn-primary btn-block" id="search-button" aria-label="submit search">
+                Search
+              </button>
+              <hr class="hr weather-hr" />
+              </div>
+              <div class="input-group-append">
+                <button type="submit" class="btn mt-2 p-1 clear-button btn-danger btn-block" id="search-button" aria-label="submit search">
+                 Clear History
                 </button>
                 <hr class="hr weather-hr" />
               </div>
@@ -40,9 +46,12 @@
         <div class="list-group" id="history"></div>
       </aside>
 
-      <div class="col-lg-9 pb-3">
+      <div class="col-md-9 pb-3">
         <section id="today" class="mt-3" role="region" aria-live="polite"></section>
-        <section id="forecast" class="row mt-3" role="region" aria-live="polite"></section>
+        <h5 class="mt-2">5-day weather forecast:</h5>
+        <section id="forecast" class="row mt-3" role="region" aria-live="polite">
+          
+        </section>
       </div>
     </div>
   </div>

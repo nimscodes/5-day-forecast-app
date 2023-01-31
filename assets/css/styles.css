@@ -1,0 +1,12 @@
+.input-group{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#forecast{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
