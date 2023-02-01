@@ -5,9 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
   <title>Weather Dashboard</title>
 </head>
 
@@ -25,7 +25,7 @@
         </h3>
         <form id="search-form" class="form">
           <div class="form-group">
-            <div class="input-group rounded">
+            <div class="input-group">
               <input class="form-input weather-search p-1" type="text" id="search-input" placeholder="London"
                 aria-labelledby="form-heading" aria-controls="today forecast" />
               <div class="input-group-append">
@@ -35,20 +35,20 @@
               <hr class="hr weather-hr" />
               </div>
               <div class="input-group-append">
-                <button type="submit" class="btn mt-2 p-1 clear-button btn-danger btn-block" id="search-button" aria-label="submit search">
+                <button type="submit" class="btn mt-2 p-1 clear-button btn-danger btn-block" id="clear-button" aria-label="submit search">
                  Clear History
                 </button>
-                <hr class="hr weather-hr" />
+  
               </div>
             </div>
           </div>
         </form>
+        <hr class="hr weather-hr" />
         <div class="list-group" id="history"></div>
       </aside>
 
       <div class="col-md-9 pb-3">
         <section id="today" class="mt-3" role="region" aria-live="polite"></section>
-        <h5 class="mt-2">5-day weather forecast:</h5>
         <section id="forecast" class="row mt-3" role="region" aria-live="polite">
           
         </section>
