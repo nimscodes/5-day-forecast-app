@@ -69,7 +69,7 @@ function renderForecast(city) {
         const iconurl = "https://openweathermap.org/img/w/" + weatherIcon + ".png";
 
         $('#today').append(`
-            <div class="card rounded-0">
+            <div class="card rounded-0 mb-3">
                 <div class="card-header py-0">
                     <h5 class="card-title">${cityName} (${todaysDate})<img src=${iconurl} alt="weather icon"></h5>
                 </div>
@@ -80,7 +80,7 @@ function renderForecast(city) {
                 </div>
             </div>
         `)
-        $('#forecast-header').text = "5-DAY WEATHER FORCAST:"
+        $('#forecast-header').text("5-DAY WEATHER FORCAST:")
         for (let i = 0; i < forecastArr.length; i++) {
             const new_date = getDay(moment(new Date()).add(i, 'd').day());
             const weatherIcon = forecastArr[i].weather[0].icon;
