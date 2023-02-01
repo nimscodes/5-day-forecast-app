@@ -72,7 +72,7 @@ function renderForecast(city) {
         const iconurl = "https://openweathermap.org/img/w/" + weatherIcon + ".png";
 
         $('#today').append(`
-            <div class="card">
+            <div class="card rounded-0">
                 <div class="card-header py-0">
                     <h5 class="card-title">${cityName} (${todaysDate})<img src=${iconurl} alt="weather icon"></h5>
                 </div>
@@ -93,7 +93,7 @@ function renderForecast(city) {
             // clearContent('forecast');
 
             $('#forecast').append(`
-                <div class="card bg-primary mr-2 mb-2 p-0 text-white text-center";">
+                <div class="card bg-primary mr-2 mb-2 p-0 text-white text-center rounded-0";">
                     <div class="card-header py-1">
                         <h5 class="card-title">${new_date}</h5>
                     </div>
