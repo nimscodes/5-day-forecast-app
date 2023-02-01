@@ -128,9 +128,8 @@ function init() {
 
 init();
 
-SEARCH.addEventListener('click', (event) => {
+$('#search-button').on('click', (event) => {
     event.preventDefault();
-
 
     const userInput = $('#search-input').val().trim();
     if (userInput !== "" && !history.includes(userInput)) {
