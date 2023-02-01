@@ -3,7 +3,7 @@
 const APIKEY = "dcaf47b710d76b6837dcc43dd5aaf5c9";
 
 // retreive history from local storage
-const history = JSON.parse(localStorage.getItem('history')) || [];
+let history = JSON.parse(localStorage.getItem('history')) || [];
 
 // function to clear any content when passed an elementid
 function clearContent(elementID) {
@@ -132,19 +132,31 @@ $('#search-button').on('click', (event) => {
     event.preventDefault();
 
     const userInput = $('#search-input').val().trim();
-    if (userInput !== "" && !history.includes(userInput)) {
-        history.push(userInput);
-        localStorage.setItem('history', JSON.stringify(history));
+    if (userInput === ""){
+        return;
+    }else{
+        if(!history.includes(userInput)){
+            history.push(userInput);
+            history.sort(function(element1, element2){
+                return history.indexOf(element2) - history.indexOf(element1);
+            })
+            localStorage.setItem('history', JSON.stringify(history));
+        }
         renderForecast(userInput);
-        renderHistoryButtons();
+        
     }
+    renderHistoryButtons();
+    
 
 })
 
 $('#clear-button').on('click', function (e) {
     e.preventDefault();
-    localStorage.removeItem('history');
-    clearContent('history')
+    
+    window.localStorage.removeItem('history');
+    history = [];
+    clearContent('history');
+    console.log(history);
 })
 
 
