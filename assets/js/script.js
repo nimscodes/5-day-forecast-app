@@ -1,9 +1,6 @@
-const SEARCH = document.getElementById('search-button');
-const HISTORY = document.getElementById('history');
-const FORECAST = document.getElementById('forecast');
 
 //apikey safely stored in a hiddenly js file 
-const APIKEY = config.APIKEY;
+const APIKEY = "dcaf47b710d76b6837dcc43dd5aaf5c9";
 
 // retreive history from local storage
 const history = JSON.parse(localStorage.getItem('history')) || [];
