@@ -143,8 +143,8 @@ $('#search-button').on('click', (event) => {
 
 $('#clear-button').on('click', function (e) {
     e.preventDefault();
-    clearContent('history');
     localStorage.removeItem('history');
+    clearContent('history')
 })
 
 
